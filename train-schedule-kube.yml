@@ -31,7 +31,7 @@ spec:
     spec:
       containers:
       - name: train-schedule
-        image: krisforu/train-schedule:autoscaling
+        image: linuxacademycontent/train-schedule:autoscaling
         ports:
         - containerPort: 8080
         livenessProbe:
@@ -44,7 +44,8 @@ spec:
         resources:
           requests:
             cpu: 200m
- ---
+
+---
 
 apiVersion: autoscaling/v2beta1
 kind: HorizontalPodAutoscaler
